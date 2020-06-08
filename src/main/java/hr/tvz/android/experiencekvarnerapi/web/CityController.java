@@ -1,5 +1,6 @@
 package hr.tvz.android.experiencekvarnerapi.web;
 
+import hr.tvz.android.experiencekvarnerapi.activity.ActivityDTO;
 import hr.tvz.android.experiencekvarnerapi.activity.category.ActivityCategoryDTO;
 import hr.tvz.android.experiencekvarnerapi.city.CityDTO;
 import hr.tvz.android.experiencekvarnerapi.city.ICityService;
@@ -31,6 +32,19 @@ public class CityController {
     @GetMapping("/{cityID}/activity-categories")
     public ResponseEntity<List<ActivityCategoryDTO>> getActivityCategoriesOfCity(@PathVariable final Long cityID) {
         List<ActivityCategoryDTO> result = cityService.findActivityCategoriesOfCity(cityID);
+        if (result.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok()
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body(result);
+        }
+    }
+
+    @GetMapping("/{cityID}/activities/{categoryID}")
+    public ResponseEntity<List<ActivityDTO>> getActivitiesOfCityAndCategory(
+            @PathVariable final Long cityID, @PathVariable final Long categoryID) {
+        List<ActivityDTO> result = cityService.findActivitiesOfCityAndCategory(cityID, categoryID);
         if (result.isEmpty()) {
             return ResponseEntity.noContent().build();
         } else {

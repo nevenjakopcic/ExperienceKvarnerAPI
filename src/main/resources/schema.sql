@@ -19,6 +19,6 @@ create table Activity (
     score           float not null,
     city_fk         long not null,
         foreign key (city_fk) references City(id),
-    category_fk     long not null,
-        foreign key (category_fk) references Activity_Category
+    activity_category_fk     long not null,
+        foreign key (activity_category_fk) references Activity_Category
 )

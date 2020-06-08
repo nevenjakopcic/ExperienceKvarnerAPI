@@ -8,6 +8,8 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
+@Entity
+@Table(name = "activity")
 public class ActivityModel {
 
     @Id

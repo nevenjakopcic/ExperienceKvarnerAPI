@@ -9,6 +9,8 @@ import java.util.Set;
 
 @Data
 @NoArgsConstructor
+@Entity
+@Table(name = "city")
 public class CityModel {
 
     @Id
@@ -19,6 +21,6 @@ public class CityModel {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "City")
+    @OneToMany(mappedBy = "city")
     private Set<ActivityModel> activities;
 }

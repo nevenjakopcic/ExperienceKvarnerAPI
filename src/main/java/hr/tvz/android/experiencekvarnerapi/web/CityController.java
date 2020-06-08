@@ -1,12 +1,11 @@
 package hr.tvz.android.experiencekvarnerapi.web;
 
+import hr.tvz.android.experiencekvarnerapi.activity.category.ActivityCategoryDTO;
 import hr.tvz.android.experiencekvarnerapi.city.CityDTO;
 import hr.tvz.android.experiencekvarnerapi.city.ICityService;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +22,21 @@ public class CityController {
 
     @GetMapping
     public ResponseEntity<List<CityDTO>> getAllCities() {
-        return ResponseEntity.ok(cityService.findAll());
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(cityService.findAll());
+    }
+
+    // Returns only Categories for which there is at least one Activity in a given city.
+    @GetMapping("/{cityID}/activity-categories")
+    public ResponseEntity<List<ActivityCategoryDTO>> getActivityCategoriesOfCity(@PathVariable final Long cityID) {
+        List<ActivityCategoryDTO> result = cityService.findActivityCategoriesOfCity(cityID);
+        if (result.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok()
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body(result);
+        }
     }
 }

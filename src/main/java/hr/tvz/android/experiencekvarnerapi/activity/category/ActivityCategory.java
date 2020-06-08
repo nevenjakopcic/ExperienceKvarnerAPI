@@ -1,4 +1,4 @@
-package hr.tvz.android.experiencekvarnerapi.activity;
+package hr.tvz.android.experiencekvarnerapi.activity.category;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

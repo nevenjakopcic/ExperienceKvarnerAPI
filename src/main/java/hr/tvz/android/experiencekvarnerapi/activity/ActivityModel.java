@@ -1,5 +1,6 @@
 package hr.tvz.android.experiencekvarnerapi.activity;
 
+import hr.tvz.android.experiencekvarnerapi.activity.category.ActivityCategory;
 import hr.tvz.android.experiencekvarnerapi.city.CityModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
 -- Cities
-insert into City(name) values ( 'Rijeka' );
-insert into City(name) values ( 'Senj' );
-insert into City(name) values ( 'Krk' );
-insert into City(name) values ( 'Rab' );
+insert into City(name, image) values ( 'Rijeka', 'rijeka.jpg' );
+insert into City(name, image) values ( 'Senj', 'rijeka.jpg' );
+insert into City(name, image) values ( 'Krk', 'rijeka.jpg' );
+insert into City(name, image) values ( 'Rab', 'rijeka.jpg' );
 
 -- Activity_Category
 insert into Activity_Category(name) values ( 'beach' );

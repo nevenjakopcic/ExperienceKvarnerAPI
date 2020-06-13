@@ -21,6 +21,9 @@ public class CityModel {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "image")
+    private String image;
+
     @OneToMany(mappedBy = "city")
     private Set<ActivityModel> activities;
 }

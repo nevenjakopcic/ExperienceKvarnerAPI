@@ -4,7 +4,8 @@ drop table if exists City;
 
 create table City (
     id              long identity,
-    name            varchar(255) not null
+    name            varchar(255) not null,
+    image           varchar(255) not null
 );
 
 create table Activity_Category (

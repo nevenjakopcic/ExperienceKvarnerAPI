@@ -18,6 +18,7 @@ create table Activity (
     name            varchar(255) not null,
     description     text,
     score           float not null,
+    image           varchar(255) not null,
     city_fk         long not null,
         foreign key (city_fk) references City(id),
     activity_category_fk     long not null,

@@ -27,6 +27,9 @@ public class ActivityModel {
     @Column(name = "score")
     private Float score;
 
+    @Column(name = "image")
+    private String image;
+
     @ManyToOne
     @JoinColumn(name = "city_fk", nullable = false)
     private CityModel city;

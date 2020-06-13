@@ -8,11 +8,13 @@ public class ActivityDTO {
     @Getter private final String name;
     @Getter private final String description;
     @Getter private final Float score;
+    @Getter private final String image;
 
     public ActivityDTO(ActivityModel model) {
         this.id = model.getId();
         this.name = model.getName();
         this.description = model.getDescription();
         this.score = model.getScore();
+        this.image = model.getImage();
     }
 }

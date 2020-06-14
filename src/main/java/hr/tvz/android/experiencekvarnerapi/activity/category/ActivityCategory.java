@@ -18,4 +18,7 @@ public class ActivityCategory {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "image")
+    private String image;
 }

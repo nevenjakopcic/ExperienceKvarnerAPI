@@ -1,14 +1,14 @@
 -- Cities
-insert into City(name, image) values ( 'RIJEKA', 'rijeka.jpg' );
-insert into City(name, image) values ( 'SENJ', 'senj.jpg' );
-insert into City(name, image) values ( 'KRK', 'krk.jpg' );
-insert into City(name, image) values ( 'RAB', 'rab.jpg' );
+insert into City(name, image) values ( 'Rijeka', 'rijeka.jpg' );
+insert into City(name, image) values ( 'Senj', 'senj.jpg' );
+insert into City(name, image) values ( 'Krk', 'krk.jpg' );
+insert into City(name, image) values ( 'Rab', 'rab.jpg' );
 
 -- Activity_Category
-insert into Activity_Category(name) values ( 'Beaches' );
-insert into Activity_Category(name) values ( 'Events' );
-insert into Activity_Category(name) values ( 'Restaurants' );
-insert into Activity_Category(name) values ( 'Apartments' );
+insert into Activity_Category(name, image) values ( 'Beaches', 'beach.png' );
+insert into Activity_Category(name, image) values ( 'Events', 'event.png' );
+insert into Activity_Category(name, image) values ( 'Restaurants', 'restaurant.png' );
+insert into Activity_Category(name, image) values ( 'Apartments', 'apartments.png' );
 
 -- Activity
     -- Beaches

@@ -67,7 +67,7 @@ insert into Activity(name, score, city_fk, activity_category_fk, image, descript
 insert into Activity(name, score, city_fk, activity_category_fk, image, description)
     values ( 'Glagolitic Alphabet Trail - all year', 4.8, 3, 2,'events/glagolitic.jpg', 'The Baška Glagolitic Trail will take you through the winding rocky streets and numerous natural beauties of Baška. It is the best way to discover the stories that shaped our town and the Glagolitic letters, with their priceless cultural significance in our history.');
 insert into Activity(name, score, city_fk, activity_category_fk, image, description)
-    values ( 'Malinska Beerfest 2020 - 26.6 - 27.6', 4.2, 3, 2,'events/beer.jpg', 'Beerfest in collaboration with the King''s Caffe Pub Malinska');
+    values ( 'Malinska Beerfest 2020 - 26.6 - 27.6', 4.2, 3, 2,'events/beerfest.jpg', 'Beerfest in collaboration with the King''s Caffe Pub Malinska');
 insert into Activity(name, score, city_fk, activity_category_fk, image, description)
     values ( 'Basket Tour 2020 - July', 3.9, 3, 2,'events/basket.jpg', 'Street basket tournament');
 insert into Activity(name, score, city_fk, activity_category_fk, image, description)
